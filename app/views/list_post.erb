@@ -1,0 +1,24 @@
+<table>
+  <tr>
+    <td colspan="4" align="right"><a href="/categories/<%=params[:id]%>/posts/new">Create new post</a></td>
+  </tr>
+  <tr>
+    <td style="width:15%"><b> Title </td>
+    <td style="width:45%"><b> Description </td>
+    <td style="width:10%"><b> Price</td>
+    <td style="width:20%"><b> Email</td>
+    <td style="width:10%"><b></td>
+  </tr>
+  <% @posts.each do |p| %>
+    <tr>
+
+      <td><a href="/categories/<%=params[:id]%>/posts/view/<%=p.id%>"><%= p.title %></a></td>
+      <td><%= p.description %></td>
+      <td><%= p.price.to_f.round(2) %></td>
+      <td><%= p.email %></td>
+      <td><a href="/categories/<%=params[:id]%>/posts/edit/<%=p.id%>">Edit</a></td>
+    </tr>
+
+<%end%>
+</table>
+

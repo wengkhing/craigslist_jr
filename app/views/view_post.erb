@@ -1,0 +1,16 @@
+<table>
+  <tr>
+    <td style="width:20%"><b> Title </td>
+    <td style="width:50%"><b> Description </td>
+    <td style="width:10%"><b> Price</td>
+    <td style="width:20%"><b> Email</td>
+  </tr>
+
+    <tr>
+      <td><%= @post.title %></td>
+      <td><%= @post.description %></td>
+      <td><%= @post.price.to_f.round(2) %></td>
+      <td><%= @post.email %></td>
+    </tr>
+
+</table>

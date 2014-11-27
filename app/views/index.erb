@@ -1,11 +1,20 @@
-<h1>Deaf Aunty</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+</head>
+<body>
+  <h1>Craig's List Jr.</h1>
 
-<p>Say something to Aunty</p>
+  <h2>Categories</h2>
+  <table>
+    <%Category.all.each do |l|%>
+    <tr>
+      <td><a href="/categories/<%=l.id%>/posts"><%=l.name%></a></td>
+    </tr>
+    <%end%>
+  </table>
 
-<form action="/aunty" method="post">
-  <input type="text" name="user_input">
-  <input type="submit" value="Say It!">
-</form>
-
-<p>URL parameters:</p>
-<%= params %>
+</body>
+</html>
